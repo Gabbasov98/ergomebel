@@ -1,0 +1,553 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <!--    <meta name="viewport" content="width=device-width, initial-scale=1.0">-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, minimum-scale=1, user-scalable=no">
+
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <link rel="stylesheet" href="css/libs.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+    <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&amp;apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036"></script>
+    <title>Главная</title>
+</head>
+
+
+
+<style>
+    .wrapper a {
+        font-size: 30px;
+        text-transform: capitalize;
+    }
+
+    .wrapper button {
+        margin-bottom: 25px;
+        width: 300px;
+        height: 45px;
+    }
+</style>
+
+<body class="m-page">
+
+    <div class="wrapper" style="padding: 50px;">
+        <a href="index.html" style="display: block; margin-bottom: 20px;">
+            Главная
+        </a>
+        <a href="catalog.html" style="display: block; margin-bottom: 20px;">
+            Товары
+        </a>
+        <a href="catalog2.html" style="display: block; margin-bottom: 20px;">
+            Серии
+        </a>
+        <a href="catalog-item.html" style="display: block; margin-bottom: 20px;">
+            Детальная страница – товар
+        </a>
+        <a href="catalog-item2.html" style="display: block; margin-bottom: 20px;">
+            Детальная страница – товар 2
+        </a>
+        <a href="catalog-item3.html" style="display: block; margin-bottom: 20px;">
+            Детальная страница – товар 3
+        </a>
+        <a href="catalog-item4.html" style="display: block; margin-bottom: 20px;">
+            Детальная страница – серия
+        </a>
+        <a href="contacts.html" style="display: block; margin-bottom: 20px;">
+            Контакты
+        </a>
+        <a href="about.html" style="display: block; margin-bottom: 20px;">
+            О компании
+        </a>
+        <a href="cart.html" style="display: block; margin-bottom: 20px;">
+            Корзина и оформление заказа
+        </a>
+        <a href="delivery.html" style="display: block; margin-bottom: 20px;">
+            Доставка
+        </a>
+        <a href="payment.html" style="display: block; margin-bottom: 20px;">
+            Оплата
+        </a>
+        <a href="custom.html" style="display: block; margin-bottom: 20px;">
+            Мебель на заказ
+        </a>
+        <a href="portfolio.html" style="display: block; margin-bottom: 20px;">
+            Портфолио разводящая
+        </a>
+        <a href="portfolio-item.html" style="display: block; margin-bottom: 20px;">
+            Портфолио детальная
+        </a>
+        <a href="sales.html" style="display: block; margin-bottom: 20px;">
+            Акции разводящая
+        </a>
+        <a href="sale-item.html" style="display: block; margin-bottom: 20px;">
+            Акции детальная
+        </a>
+        <a href="blog.html" style="display: block; margin-bottom: 20px;">
+            Блог и новости
+        </a>
+        <a href="blog-item.html" style="display: block; margin-bottom: 20px;">
+            Блог и новости детальная
+        </a>
+        <a href="favourite.html" style="display: block; margin-bottom: 20px;">
+            Избранное
+        </a>
+
+
+
+
+        <button data-modal="orderModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Быстрый заказ
+        </button>
+        <button data-modal="addedToCartModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Товар добавлен в корзину
+        </button>
+        <button data-modal="configModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Выберите конфигурацию
+        </button>
+        <button data-modal="addReviewModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Оставить отзыв
+        </button>
+
+    </div>
+
+
+
+
+
+
+
+
+    <!--  -->
+    <div class="modal" id="orderModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Заказать в 1 клик
+            </div>
+
+            <form action="" class="modal-form">
+                <fieldset class="fg fg-dynamic">
+                    <input type="tel">
+                    <label>Телефон<span>*</span></label>
+                </fieldset>
+
+                <div class="modal-form__hint">
+                    <div class="text12 gray-dark-text">
+                        При оформлении заказа мы осуществляем обработку ваших персональных данных. <br>
+                    Указывая свой контактный номер телефона, <br>
+                    вы подтверждаете ознакомление <br>с
+                        <a href="">договором-оферты</a> и 
+                        <a href="">условиями обработки персональных данных</a>
+                    </div>
+                </div>
+
+                <button class="modal-form__btn m-btn m-btn-orange">
+                    <span>Отправить</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal cart-modal" id="addedToCartModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+
+            <div class="cart-modal__subtitle text13 gray-dark-text">
+                Товар
+            </div>
+
+            <div class="cart-modal__title text18 bold-text">
+                Кресло офисное Leo B black Ткань сетка жёлтая
+            </div>
+
+            <div class="cart-modal__desc text13 gray-dark-text">
+                Добавлен в <a href="">корзину</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal config-modal" id="configModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+
+            <div class="h2 text-center">
+                выберите конфигурацию
+            </div>
+
+            <div class="config-modal__grid">
+                <div class="config-modal__col">
+                    <div class="product-card__top">
+                        <div class="product-card__img">
+                            <img src="img/product5.webp" alt="">
+                        </div>
+                        <div class="product-card__action _flex">
+                            <button class="product-card__action-btn compare-btn">
+                                <svg width="21" height="20" viewBox="0 0 21 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M12.6652 20C12.9316 20 13.1871 19.8942 13.3754 19.7058C13.5638 19.5174 13.6696 19.2619 13.6696 18.9955V11.9643C13.6696 11.6979 13.5638 11.4424 13.3754 11.254C13.1871 11.0656 12.9316 10.9598 12.6652 10.9598C12.3988 10.9598 12.1433 11.0656 11.9549 11.254C11.7665 11.4424 11.6607 11.6979 11.6607 11.9643V18.9955C11.6607 19.2619 11.7665 19.5174 11.9549 19.7058C12.1433 19.8942 12.3988 20 12.6652 20Z" fill="#1F2B32" />
+                                    <path d="M4.62946 20C4.89586 20 5.15135 19.8942 5.33973 19.7058C5.5281 19.5174 5.63393 19.2619 5.63393 18.9955V11.9643C5.63393 11.6979 5.5281 11.4424 5.33973 11.254C5.15135 11.0656 4.89586 10.9598 4.62946 10.9598C4.36306 10.9598 4.10757 11.0656 3.9192 11.254C3.73083 11.4424 3.625 11.6979 3.625 11.9643V18.9955C3.625 19.2619 3.73083 19.5174 3.9192 19.7058C4.10757 19.8942 4.36306 20 4.62946 20Z" fill="#1F2B32" />
+                                    <path d="M16.683 20C16.9494 20 17.2049 19.8942 17.3933 19.7058C17.5817 19.5174 17.6875 19.2619 17.6875 18.9955V6.94196C17.6875 6.67556 17.5817 6.42007 17.3933 6.2317C17.2049 6.04333 16.9494 5.9375 16.683 5.9375C16.4166 5.9375 16.1611 6.04333 15.9728 6.2317C15.7844 6.42007 15.6786 6.67556 15.6786 6.94196V18.9955C15.6786 19.2619 15.7844 19.5174 15.9728 19.7058C16.1611 19.8942 16.4166 20 16.683 20Z" fill="#1F2B32" />
+                                    <path d="M8.64732 20C8.91372 20 9.16921 19.8942 9.35759 19.7058C9.54596 19.5174 9.65179 19.2619 9.65179 18.9955V6.94196C9.65179 6.67556 9.54596 6.42007 9.35759 6.2317C9.16921 6.04333 8.91372 5.9375 8.64732 5.9375C8.38092 5.9375 8.12543 6.04333 7.93706 6.2317C7.74869 6.42007 7.64286 6.67556 7.64286 6.94196V18.9955C7.64286 19.2619 7.74869 19.5174 7.93706 19.7058C8.12543 19.8942 8.38092 20 8.64732 20Z" fill="#1F2B32" />
+                                </svg>
+                            </button>
+                            <button class="product-card__action-btn favourite-btn">
+                                <svg width="20" height="21" viewBox="0 0 20 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M14.5835 1.21094C13.6451 1.22553 12.7272 1.48748 11.9224 1.97033C11.1177 2.45318 10.4546 3.13983 10.0001 3.96094C9.54566 3.13983 8.88257 2.45318 8.07783 1.97033C7.27308 1.48748 6.35517 1.22553 5.4168 1.21094C3.92091 1.27593 2.51155 1.93032 1.49661 3.03113C0.481678 4.13195 -0.0563308 5.58971 0.000128003 7.08594C0.000128003 12.7318 9.13013 19.2526 9.51846 19.5293L10.0001 19.8701L10.4818 19.5293C10.8701 19.2543 20.0001 12.7318 20.0001 7.08594C20.0566 5.58971 19.5186 4.13195 18.5036 3.03113C17.4887 1.93032 16.0793 1.27593 14.5835 1.21094ZM10.0001 17.8184C7.28929 15.7934 1.66679 10.8184 1.66679 7.08594C1.60983 6.03154 1.9721 4.99738 2.6746 4.20902C3.3771 3.42066 4.36282 2.94206 5.4168 2.8776C6.47077 2.94206 7.45649 3.42066 8.15899 4.20902C8.86149 4.99738 9.22376 6.03154 9.16679 7.08594H10.8335C10.7765 6.03154 11.1388 4.99738 11.8413 4.20902C12.5438 3.42066 13.5295 2.94206 14.5835 2.8776C15.6374 2.94206 16.6232 3.42066 17.3257 4.20902C18.0282 4.99738 18.3904 6.03154 18.3335 7.08594C18.3335 10.8201 12.711 15.7934 10.0001 17.8184Z" fill="#1F2B32" />
+                                    <path class="_fill" d="M10.0001 17.8184C7.28929 15.7934 1.66679 10.8184 1.66679 7.08594C1.60983 6.03154 1.9721 4.99738 2.6746 4.20902C3.3771 3.42066 4.36282 2.94206 5.4168 2.8776C6.47077 2.94206 7.45649 3.42066 8.15899 4.20902C8.86149 4.99738 9.22376 6.03154 9.16679 7.08594H10.8335C10.7765 6.03154 11.1388 4.99738 11.8413 4.20902C12.5438 3.42066 13.5295 2.94206 14.5835 2.8776C15.6374 2.94206 16.6232 3.42066 17.3257 4.20902C18.0282 4.99738 18.3904 6.03154 18.3335 7.08594C18.3335 10.8201 12.711 15.7934 10.0001 17.8184Z" fill="#FF326F" />
+                                </svg>
+                            </button>
+                        </div>
+                        <div class="product-card__sale m-badge">
+                            <span>-5%</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="config-modal__col2">
+                    <div class="product-card__text">
+                        <div class="product-card__type text13 gray-active-text">
+                            Офисные кресла
+                        </div>
+                        <a href="" class="product-card__title text18 bold-text">
+                            Кресло офисное Leo B black Ткань сетка жёлтая
+                        </a>
+                    </div>
+                    <div class="config-modal__wrap">
+                        <div class="config-modal__sub-col">
+                            <div class="product-card__feedback _flex">
+                                <div class="rating">
+                                    <div class="rating-input rating-input--read-only" data-total-rating="5" data-rating-code="1">
+                                        <div class="rating-input__item" data-rating-value="5">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                            </svg>
+                                        </div>
+                                        <div class="rating-input__item" data-rating-value="4">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                            </svg>
+                                        </div>
+                                        <div class="rating-input__item" data-rating-value="3">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                            </svg>
+                                        </div>
+                                        <div class="rating-input__item" data-rating-value="2">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                            </svg>
+                                        </div>
+                                        <div class="rating-input__item" data-rating-value="1">
+                                            <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                            </svg>
+                                        </div>
+                                        <input class="rating-input__field" type="number" value="0">
+
+                                    </div>
+                                </div>
+                                <div class="product-card__feedback-count text13">
+                                    8 отзывов
+                                </div>
+                            </div>
+                            <div class="product-card__wrap2 _flex-between">
+                                <div class="product-card__info">
+                                    <div class="product-card__available green-text bold-text">
+                                        <span class="text13">
+                                        В наличии
+                                    </span>
+                                    </div>
+                                    <div class="product-card__prices _flex">
+                                        <div class="product-card__price text18 bold-text">
+                                            от 5 735 ₽
+                                        </div>
+                                        <div class="product-card__price2 text18 gray-active-text">
+                                            от 6 200 ₽
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="config-modal__sub-col2">
+                            <div class="product-card__props">
+                                <div class="product-card__colors gray-dark-text">
+                                    <div class="text13">
+                                        32 цвета
+                                    </div>
+                                </div>
+                                <div class="prop-item">
+                                    <div class="prop-item__title">Артикул</div>
+                                    <div class="prop-item__desc">1894564</div>
+                                </div>
+                                <div class="prop-item">
+                                    <div class="prop-item__title">Страна производитель</div>
+                                    <div class="prop-item__desc">Италия</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="config-modal__colors">
+                        <div class="text14 bold-text">
+                            В другом цвете
+                        </div>
+                        <div class="colors">
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color2.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color3.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color4.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color5.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color6.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color7.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color8.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color9.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color10.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <div class="color-field">
+                                <input type="radio" name="color">
+                                <div class="color-field__img">
+                                    <img src="img/color11.jpg" alt="">
+                                </div>
+                                <div class="color-field__title">
+                                    <span>
+            Темный
+            ясень
+        </span>
+                                </div>
+                                <label></label>
+                            </div>
+
+                            <button class="colors__more">
+                                <span class="_view1">Ещё</span>
+                                <span class="_view2">Свернуть</span>
+                            </button>
+                        </div>
+
+                    </div>
+
+                    <div class="config-modal__nav">
+                        <button class="config-modal__btn m-btn m-btn-orange">
+                            <span>Добавить в корзину 5 735 ₽</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal map-modal review-modal" id="addReviewModal">
+        <div class="modal__dialog">
+            <div class="container">
+                <div class="map-modal__inner">
+                    <button class="close-btn m-btn-orange _close-modal">
+                        <img src="img/close.svg" alt="">
+                    </button>
+
+                    <div class="review-modal__wrap">
+                        <div class="h2 text-center">
+                            Оставить отзыв
+                        </div>
+                        <div class="rating">
+                            <div class="rating-input" data-total-rating="0" data-rating-code="1">
+                                <div class="rating-input__item" data-rating-value="5">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                    </svg>
+                                </div>
+                                <div class="rating-input__item" data-rating-value="4">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                    </svg>
+                                </div>
+                                <div class="rating-input__item" data-rating-value="3">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                    </svg>
+                                </div>
+                                <div class="rating-input__item" data-rating-value="2">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                    </svg>
+                                </div>
+                                <div class="rating-input__item" data-rating-value="1">
+                                    <svg width="11" height="10" viewBox="0 0 11 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M5.2028 0.914662C5.29634 0.626753 5.70366 0.626754 5.79721 0.914663L6.55241 3.23894C6.59425 3.3677 6.71423 3.45487 6.84961 3.45487H9.29351C9.59623 3.45487 9.7221 3.84225 9.47719 4.02019L7.50004 5.45668C7.39051 5.53625 7.34468 5.67731 7.38652 5.80606L8.14172 8.13034C8.23527 8.41825 7.90574 8.65766 7.66083 8.47973L5.68368 7.04324C5.57416 6.96367 5.42584 6.96367 5.31632 7.04324L3.33917 8.47973C3.09426 8.65767 2.76473 8.41825 2.85828 8.13034L3.61348 5.80606C3.65532 5.67731 3.60949 5.53625 3.49996 5.45668L1.52281 4.02019C1.2779 3.84225 1.40377 3.45487 1.70649 3.45487H4.15039C4.28577 3.45487 4.40576 3.3677 4.44759 3.23894L5.2028 0.914662Z" fill="#BCBCBC" />
+                                    </svg>
+                                </div>
+                                <input class="rating-input__field" type="number" value="0">
+
+                            </div>
+                        </div>
+                        <form action="" class="review-form">
+                            <div class="review-form__fields">
+                                <fieldset class="fg fg-dynamic">
+                                    <input type="text">
+                                    <label>Имя</label>
+                                </fieldset>
+                                <fieldset class="fg fg-dynamic _full">
+                                    <textarea></textarea>
+                                    <label>Отзыв</label>
+                                </fieldset>
+                            </div>
+                            <div class="file-input">
+                                <button class="file-input__btn m-btn">
+                                    <input type="file" name="" id="">
+                                    <span>Прикрепить файлы</span>
+                                </button>
+                            </div>
+                            <div class="review-form__hint">
+                                <div class="text12">Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных</div>
+                            </div>
+                            <button class="review-form__btn m-btn m-btn-orange">
+                                <span>Отправить</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="js/libs.min.js"></script>
+    <script src="js/main.min.js"></script>
+
+</body>
+
+</html>
