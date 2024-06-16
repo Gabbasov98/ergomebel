@@ -92,6 +92,18 @@
         <a href="favourite.html" style="display: block; margin-bottom: 20px;">
             Избранное
         </a>
+        <a href="compare.html" style="display: block; margin-bottom: 20px;">
+            Сравнение
+        </a>
+        <a href="profile.html" style="display: block; margin-bottom: 20px;">
+            Профиль
+        </a>
+        <a href="orders.html" style="display: block; margin-bottom: 20px;">
+            Заказы
+        </a>
+        <a href="appeals.html" style="display: block; margin-bottom: 20px;">
+            Обращения
+        </a>
 
 
 
@@ -107,6 +119,24 @@
         </button>
         <button data-modal="addReviewModal" style="border: 2px solid #000;margin-bottom: 20px;">
             Оставить отзыв
+        </button>
+        <button data-modal="authModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Авторизоваться
+        </button>
+        <button data-modal="authModal2" style="border: 2px solid #000;margin-bottom: 20px;">
+            Введите код из смс
+        </button>
+        <button data-modal="authModal3" style="border: 2px solid #000;margin-bottom: 20px;">
+            Введите код из смс 2
+        </button>
+        <button data-modal="authModal4" style="border: 2px solid #000;margin-bottom: 20px;">
+            Введите код из смс 3
+        </button>
+        <button data-modal="regModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Форма регистрации
+        </button>
+        <button data-modal="appealModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Новое обращение
         </button>
 
     </div>
@@ -261,7 +291,7 @@
                             <div class="product-card__wrap2 _flex-between">
                                 <div class="product-card__info">
                                     <div class="product-card__available green-text bold-text">
-                                        <span class="text13">
+                                        <span class="text13 text12-mob">
                                         В наличии
                                     </span>
                                     </div>
@@ -464,7 +494,8 @@
 
                     <div class="config-modal__nav">
                         <button class="config-modal__btn m-btn m-btn-orange">
-                            <span>Добавить в корзину 5 735 ₽</span>
+                            <span class="_view1">Добавить в корзину 5 735 ₽</span>
+                            <span class="_view2">В корзину 5 735 ₽</span>
                         </button>
                     </div>
                 </div>
@@ -542,6 +573,348 @@
                     </div>
                 </div>
             </div>
+        </div>
+    </div>
+
+    <div class="modal" id="authModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Авторизоваться
+            </div>
+
+            <form action="" class="modal-form">
+                <fieldset class="fg fg-phone">
+                    <input type="tel" placeholder="+7(9__) ___-__-__">
+                    <label>Телефон<span>*</span></label>
+                </fieldset>
+
+                <button class="modal-form__btn m-btn m-btn-orange">
+                    <span>Отправить</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal code-modal" id="authModal2">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Введите код из смс
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="code-field fg">
+                    <div class="input-group">
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
+                </div>
+
+                <div class="code-modal__nav">
+                    <div class="code-modal__hint text14">
+                        Отправить повторно через 70 сек.
+                    </div>
+                    <button class="code-modal__btn line-btn">
+                        <span>Изменить номер телефона</span>
+                    </button>
+                </div>
+
+                <button class="modal-form__btn m-btn m-btn-orange">
+                    <span>Войти</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal code-modal" id="authModal3">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Введите код из смс
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="code-field fg">
+                    <div class="input-group">
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
+                </div>
+
+                <div class="code-modal__nav">
+                    <button class="code-modal__btn line-btn">
+                        <span>Отправить повторно</span>
+                    </button>
+                    <button class="code-modal__btn line-btn">
+                        <span>Изменить номер телефона</span>
+                    </button>
+                </div>
+
+                <button class="modal-form__btn m-btn m-btn-orange">
+                    <span>Войти</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal code-modal" id="authModal4">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Введите код из смс
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="code-field__wrap _error">
+                    <div class="code-field fg">
+                        <div class="input-group">
+                            <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                            <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                        </div>
+                        <div class="input-group">
+                            <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                            <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                        </div>
+                    </div>
+
+                    <div class="code-field__error">
+                        <div class="text14">
+                            Введен неверный код
+                        </div>
+                    </div>
+                </div>
+                <div class="code-modal__nav">
+                    <button class="code-modal__btn line-btn">
+                        <span>Отправить повторно</span>
+                    </button>
+                    <button class="code-modal__btn line-btn">
+                        <span>Изменить номер телефона</span>
+                    </button>
+                </div>
+
+                <button class="modal-form__btn m-btn m-btn-orange">
+                    <span>Войти</span>
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div class="modal reg-modal" id="regModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Введите код из смс
+            </div>
+
+            <form action="" class="modal-form">
+                <div class="code-field fg">
+                    <div class="input-group">
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" autocomplete="one-time-code" required>
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
+                    <div class="input-group">
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                        <input class="js-otp-input" type="text" inputmode="numeric" pattern="[0-9]*" required>
+                    </div>
+                </div>
+
+                <div class="code-modal__nav">
+                    <div class="code-modal__hint text14">
+                        Отправить повторно через 70 сек.
+                    </div>
+                    <button class="code-modal__btn line-btn">
+                        <span>Изменить номер телефона</span>
+                    </button>
+                </div>
+
+                <div class="modal-form__fields">
+                    <fieldset class="fg fg-dynamic">
+                        <input type="text">
+                        <label>*Имя</label>
+                    </fieldset>
+                    <fieldset class="fg fg-dynamic">
+                        <input type="tel">
+                        <label>*Телефон</label>
+                    </fieldset>
+                    <fieldset class="fg fg-dynamic">
+                        <input type="email">
+                        <label>Email</label>
+                    </fieldset>
+                    <fieldset class="fg fg-dynamic">
+                        <input type="text">
+                        <label>Название организации</label>
+                    </fieldset>
+                    <fieldset class="fg fg-dynamic">
+                        <input type="text">
+                        <label>ИНН</label>
+                    </fieldset>
+                </div>
+
+                <div class="m-check _type2">
+                    <input checked type="checkbox">
+                    <label>
+                        <span>
+                        Согласен(-на) на коммуникации и получение рекламных материалов на указанный e-mail <br>и номер телефона, соответствующую обработку данных в соответствии с <a href="">условиями</a>
+                    </span>
+                    </label>
+                </div>
+
+                <button class="modal-form__btn m-btn m-btn-orange">
+                    <span>Зарегистрироваться</span>
+                </button>
+            </form>
+
+            <div class="reg-modal__hint">
+                <div class="text12">
+                    Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal appeal-modal" id="appealModal">
+        <div class="modal__bg modal-bg _close-modal"></div>
+        <div class="modal__dialog">
+            <button class="close-btn m-btn-orange _close-modal">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__title h2 text-center">
+                Новое обращение
+            </div>
+
+            <form action="" class="appeal-form">
+                <div class="appeal-form__fields">
+                    <div class="fg-select">
+                        <label>Заказ</label>
+                        <div class="gray-dropdown m-dropdown">
+                            <div class="m-dropdown__show">
+                                <div class="m-dropdown__current">
+                                    Выберите заказ
+                                </div>
+                            </div>
+                            <div class="m-dropdown__hidden">
+                                <div class="m-dropdown__options">
+                                    <div class="m-check">
+                                        <input checked type="radio" name="orderOption" data-value="Опция">
+                                        <label><span>Опция</span></label>
+                                    </div>
+                                    <div class="m-check">
+                                        <input type="radio" name="orderOption" data-value="Опция 2">
+                                        <label><span>Опция 2</span></label>
+                                    </div>
+                                    <div class="m-check">
+                                        <input type="radio" name="orderOption" data-value="Опция 3">
+                                        <label><span>Опция 3</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fg-select">
+                        <label>Товар</label>
+                        <div class="gray-dropdown m-dropdown">
+                            <div class="m-dropdown__show">
+                                <div class="m-dropdown__current">
+                                    Выберите товар
+                                </div>
+                            </div>
+                            <div class="m-dropdown__hidden">
+                                <div class="m-dropdown__options">
+                                    <div class="m-check">
+                                        <input checked type="radio" name="productOption" data-value="Опция">
+                                        <label><span>Опция</span></label>
+                                    </div>
+                                    <div class="m-check">
+                                        <input type="radio" name="productOption" data-value="Опция 2">
+                                        <label><span>Опция 2</span></label>
+                                    </div>
+                                    <div class="m-check">
+                                        <input type="radio" name="productOption" data-value="Опция 3">
+                                        <label><span>Опция 3</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fg-select">
+                        <label>Цель обращения</label>
+                        <div class="gray-dropdown m-dropdown">
+                            <div class="m-dropdown__show">
+                                <div class="m-dropdown__current">
+                                    Цель обращения
+                                </div>
+                            </div>
+                            <div class="m-dropdown__hidden">
+                                <div class="m-dropdown__options">
+                                    <div class="m-check">
+                                        <input checked type="radio" name="goalOption" data-value="Опция">
+                                        <label><span>Опция</span></label>
+                                    </div>
+                                    <div class="m-check">
+                                        <input type="radio" name="goalOption" data-value="Опция 2">
+                                        <label><span>Опция 2</span></label>
+                                    </div>
+                                    <div class="m-check">
+                                        <input type="radio" name="goalOption" data-value="Опция 3">
+                                        <label><span>Опция 3</span></label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <fieldset class="fg">
+                        <textarea placeholder="Комментарий"></textarea>
+                    </fieldset>
+                    <div class="appeal-form__contacts">
+                        <div class="text14">
+                            Способ связи (обязательно выберите один из двух)
+                        </div>
+                        <div class="appeal-form__contacts-wrap">
+                            <fieldset class="fg fg-dynamic">
+                                <input type="tel">
+                                <label>Телефон</label>
+                            </fieldset>
+                            <fieldset class="fg fg-dynamic">
+                                <input type="email">
+                                <label>Email</label>
+                            </fieldset>
+                        </div>
+                    </div>
+                    <div class="appeal-form__bottom">
+                        <div class="appeal-form__hint">
+                            Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных
+                        </div>
+                        <button class="modal-form__btn m-btn m-btn-orange">
+                            <span>Отправить обращение</span>
+                        </button>
+                    </div>
+                </div>
+            </form>
+
         </div>
     </div>
 
