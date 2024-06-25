@@ -614,7 +614,7 @@
                             <div class="catalog-modal__grid">
                                 <div class="nav2">
                                     <ul class="menu">
-                                        <li>
+                                        <li class="_open">
                                             <a>
                                                 <span class="menu__icon">
                                         <svg width="33" height="30" viewBox="0 0 33 30" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -1161,7 +1161,7 @@
                         </button>
                     </div>
 
-                    <div class="user-data">
+                    <div class="user-data _user-type-fields _self _active">
                         <div class="user-data__title">
                             Адреса доставки
                         </div>
@@ -1249,6 +1249,98 @@
 
                             </div>
                         </div>
+
+                    </div>
+
+                    <div class="user-data _user-type-fields _co">
+                        <div class="user-data__title">
+                            Адреса доставки
+                        </div>
+                        <div class="user-address">
+                            <div class="user-address__col">
+                                <div class="address-form">
+                                    <div class="address-form__fields">
+                                        <fieldset class="address-form__city fg fg-dynamic _full">
+                                            <input type="text">
+                                            <label>Город<span>*</span></label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic _full">
+                                            <input type="text">
+                                            <label>Улица<span>*</span></label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic">
+                                            <input type="text">
+                                            <label>Дом<span>*</span></label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic">
+                                            <input type="text">
+                                            <label>Корпус</label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic">
+                                            <input type="text">
+                                            <label>Подъезд</label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic">
+                                            <input type="text">
+                                            <label>Этаж</label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic">
+                                            <input type="text">
+                                            <label>Офис</label>
+                                        </fieldset>
+                                        <fieldset class="fg fg-dynamic">
+                                            <input type="text">
+                                            <label>Домофон</label>
+                                        </fieldset>
+                                        <div class="elevator-field _full">
+                                            <div class="text14 gray-dark-text">
+                                                Грузовой лифт
+                                            </div>
+                                            <div class="elevator-field__checks">
+                                                <div class="m-check _type2">
+                                                    <input checked type="radio" name="hasElevator">
+                                                    <label>
+                                                        <span>Да</span>
+                                                    </label>
+                                                </div>
+                                                <div class="m-check _type2">
+                                                    <input type="radio" name="hasElevator">
+                                                    <label>
+                                                        <span>Нет</span>
+                                                    </label>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <fieldset class="fg _full">
+                                            <textarea placeholder="Доп. комментарии"></textarea>
+                                        </fieldset>
+                                    </div>
+                                    <button class="user-data__btn m-btn m-btn-orange">
+                                        <span>Сохранить</span>
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="user-address__col2">
+                                <div class="cart-map">
+                                    <div class="map" id="cartMap2" data-cord1="55.707740" data-cord2="37.625406"></div>
+                                    <div class="cart-map__search">
+                                        <div class="fg">
+                                            <input type="text">
+                                            <label>Адрес<span> доставки</span>:</label>
+                                        </div>
+                                        <div class="cart-map__search-hidden">
+                                            <div class="cart-map__search-result">
+                                                <a href="" class="cart-map__search-item">Гамсоновский переулок, ул длд</a>
+                                                <a href="" class="cart-map__search-item">Гамсоновский переулок, ул длд</a>
+                                                <a href="" class="cart-map__search-item">Гамсоновский переулок, ул длд</a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </div>
+                        </div>
+
                     </div>
                 </div>
             </div>
@@ -1743,6 +1835,46 @@
                                     <input type="file" name="" id="">
                                     <span>Прикрепить файлы</span>
                                 </button>
+                            </div>
+                            <div class="review-form__hint">
+                                <div class="text12">Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных</div>
+                            </div>
+                            <button class="review-form__btn m-btn m-btn-orange">
+                                <span>Отправить</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal map-modal review-modal" id="reqModal">
+        <div class="modal__dialog">
+            <div class="container">
+                <div class="map-modal__inner">
+                    <button class="close-btn m-btn-orange _close-modal">
+                        <img src="img/close.svg" alt="">
+                    </button>
+
+                    <div class="review-modal__wrap">
+                        <div class="h2 text-center">
+                            оставить заявку
+                        </div>
+                        <form action="" class="review-form">
+                            <div class="review-form__fields">
+                                <fieldset class="fg fg-dynamic">
+                                    <input type="text">
+                                    <label>Имя<span>*</span></label>
+                                </fieldset>
+                                <fieldset class="fg fg-dynamic">
+                                    <input type="tel">
+                                    <label>Телефон<span>*</span></label>
+                                </fieldset>
+                                <fieldset class="fg fg-dynamic _full">
+                                    <textarea></textarea>
+                                    <label>Сообщение</label>
+                                </fieldset>
                             </div>
                             <div class="review-form__hint">
                                 <div class="text12">Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных</div>

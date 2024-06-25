@@ -111,6 +111,9 @@
 
 
 
+        <button data-modal="reqModal" style="border: 2px solid #000;margin-bottom: 20px;">
+            Oставить заявку
+        </button>
         <button data-modal="orderModal" style="border: 2px solid #000;margin-bottom: 20px;">
             Быстрый заказ
         </button>
@@ -565,6 +568,46 @@
                                     <input type="file" name="" id="">
                                     <span>Прикрепить файлы</span>
                                 </button>
+                            </div>
+                            <div class="review-form__hint">
+                                <div class="text12">Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных</div>
+                            </div>
+                            <button class="review-form__btn m-btn m-btn-orange">
+                                <span>Отправить</span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal map-modal review-modal" id="reqModal">
+        <div class="modal__dialog">
+            <div class="container">
+                <div class="map-modal__inner">
+                    <button class="close-btn m-btn-orange _close-modal">
+                        <img src="img/close.svg" alt="">
+                    </button>
+
+                    <div class="review-modal__wrap">
+                        <div class="h2 text-center">
+                            оставить заявку
+                        </div>
+                        <form action="" class="review-form">
+                            <div class="review-form__fields">
+                                <fieldset class="fg fg-dynamic">
+                                    <input type="text">
+                                    <label>Имя<span>*</span></label>
+                                </fieldset>
+                                <fieldset class="fg fg-dynamic">
+                                    <input type="tel">
+                                    <label>Телефон<span>*</span></label>
+                                </fieldset>
+                                <fieldset class="fg fg-dynamic _full">
+                                    <textarea></textarea>
+                                    <label>Сообщение</label>
+                                </fieldset>
                             </div>
                             <div class="review-form__hint">
                                 <div class="text12">Нажимая кнопку отправить вы подтверждаете свое согласие на обработку персональных данных</div>
